@@ -1,4 +1,4 @@
-module.exports = async (client, message) => {
+module.exports = async (client, message, guild) => {
     if (!message.guild || message.author.bot) return;
 
     if (!message.content.startsWith(client.config.data.prefix)) return;
@@ -10,7 +10,12 @@ module.exports = async (client, message) => {
 
     const cmd = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-    if (!cmd) return;
-
-    return cmd.execute(client, message, args);
+    
+    if (cmd) {
+        cmd.execute(client, message, args);
+        console.log(`${message.author.username} (${message.author.id}) executed (${cmd.name})`);
+    } else {
+        return;
+    }
+    
 };
