@@ -1,0 +1,11 @@
+{
+  "name": "ZarioBot",
+  "version": "1.0.0",
+  "description": "A simple discord bot",
+  "main": "index.js",
+  "author": "ThisDudeBoy,WaDixix",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
