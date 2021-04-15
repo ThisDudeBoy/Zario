@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-    name: 'developers.js',
+    name: 'developers',
     aliases: ['dev'],
     category: 'informations',
 
