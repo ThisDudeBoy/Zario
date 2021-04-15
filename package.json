@@ -6,6 +6,7 @@
   "author": "ThisDudeBoy,WaDixix",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "pretty-ms": "^7.0.1"
   }
 }
