@@ -14,7 +14,7 @@ module.exports = {
         embed.setDescription('**__Zario Team__** :');
         embed.setAuthor(message.author.username, message.author.avatarURL({ dynamic: true }));
         embed.addField("Creator", `[ThisDudeBoy](https://github.com/ThisDudeBoy) & [WaDixix](https://github.com/WaDixix)`, false)
-        embed.addField("Developers Bot :", `[ThisDudeBoy](https://github.com/ThisDudeBoy) & [WaDixix](https://github.com/WaDixix)`, false)
+        embed.addField("Bot Developers :", `[ThisDudeBoy](https://github.com/ThisDudeBoy) & [WaDixix](https://github.com/WaDixix)`, false)
         embed.setTimestamp();
         embed.setFooter(client.config.embed.footer);
 
