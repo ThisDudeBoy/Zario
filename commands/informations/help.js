@@ -22,7 +22,7 @@ module.exports = {
 
             embed.addField(category.charAt(0).toUpperCase() + category.slice(1), cmd.map((x) => '`' + x.name + '`').join(', '));
         });
-
+        embed.addField("🔗 Links", `[**Invite Me**](https://discord.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=268462304) • [**Github**](https://github.com/ThisDudeBoy/Zario)`)
         embed.setTimestamp();
         embed.setFooter(client.config.embed.footer);
 
