@@ -9,6 +9,8 @@ module.exports = {
     data: {
         prefix: '!',
         guildSupport: 'https://github.com/ThisDudeBoy/Zario',
+        guild: '',
+        channelsid: '',
         activity: '!help'
     }
 };
