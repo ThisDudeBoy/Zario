@@ -1,8 +1,8 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-    name: 'help',
-    aliases: ['h'],
+    name: 'getbot',
+    aliases: ['invite', 'add'],
     category: 'informations',
 
     execute(client, message) {
@@ -12,17 +12,11 @@ module.exports = {
         const embed = new MessageEmbed();
 
         embed.setColor('RED');
-        embed.setTitle('Help');
+        embed.setTitle('Invite Me !');
         embed.setThumbnail(client.user.avatarURL());
-        embed.setDescription('Find all the commands here');
+        embed.setDescription('Find my invitation link here');
         embed.setAuthor(message.author.username, message.author.avatarURL({ dynamic: true }));
-
-        categories.map((category) => {
-            const cmd = client.commands.filter((cmd) => cmd.category === category);
-
-            embed.addField(category.charAt(0).toUpperCase() + category.slice(1), cmd.map((x) => '`' + x.name + '`').join(', '));
-        });
-
+        embed.addField("Link", `[Click here](https://discord.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=268462304)`, true)
         embed.setTimestamp();
         embed.setFooter(client.config.embed.footer);
 
