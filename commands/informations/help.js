@@ -11,7 +11,7 @@ module.exports = {
 
         const embed = new MessageEmbed();
 
-        embed.setColor('RED');
+        embed.setColor(client.config.embed.color);
         embed.setTitle('Help');
         embed.setThumbnail(client.user.avatarURL());
         embed.setDescription('Find all the commands here');
