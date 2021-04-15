@@ -4,6 +4,6 @@ module.exports = {
     category: 'client',
 
     execute(client, message) {
-        return message.channel.send(`The bot's ping is ${message.createdTimestamp - Date.now()}ms, discord's api ping is ${Math.round(client.ws.ping)}`);
+        return message.channel.send(`The bot's ping is ${message.createdTimestamp - Date.now()}ms, discord's api ping is ${Math.round(client.ws.ping)}ms.`);
     },
 };
