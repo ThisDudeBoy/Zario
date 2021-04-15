@@ -11,6 +11,7 @@ module.exports = {
         guildSupport: 'https://github.com/ThisDudeBoy/Zario',
         guild: '',
         channelsid: '',
-        activity: '!help'
+        activity: 'github.com/ThisDudeBoy',
+        activityType: 'LISTENING'
     }
 };
