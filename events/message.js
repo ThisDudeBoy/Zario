@@ -1,4 +1,4 @@
-module.exports = async (client, message, guild) => {
+module.exports = async (client, message) => {
     if (!message.guild || message.author.bot) return;
 
     if (!message.content.startsWith(client.config.data.prefix)) return;
