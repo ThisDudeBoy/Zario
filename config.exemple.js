@@ -8,6 +8,7 @@ module.exports = {
     },
     data: {
         prefix: '!',
+        guildSupport: 'https://github.com/ThisDudeBoy/Zario',
         activity: '!help'
     }
 };
