@@ -3,14 +3,18 @@ const helper = require('../util/functions.js');
 
 module.exports = async (client, message) => {
     if (!message.guild || message.author.bot) return;
-    const embedPrefix = new MessageEmbed()
-    .setColor(client.config.embed.color)
-    .setThumbnail(client.user.avatarURL())
-    .setDescription(`My current prefix is \`${client.config.data.prefix}\`.\nUse \`${client.config.data.prefix}help\` for more help.\n\nSupport me on [Github](https://github.com/ThisDudeBoy/Zario).`)
-    .setFooter(client.config.embed.footer)
-    .setTimestamp();
 
-    if(message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) return message.channel.send(embedPrefix);
+    // When the client is mentioned
+    if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) {
+        const embed = new MessageEmbed()
+        embed.setColor(client.config.embed.color)
+        embed.setThumbnail(client.user.avatarURL())
+        embed.setDescription(`My current prefix is \`${client.config.data.prefix}\`.\nUse \`${client.config.data.prefix}help\` for more help.\n\nSupport me on [Github](https://github.com/ThisDudeBoy/Zario).`)
+        embed.setFooter(client.config.embed.footer)
+        embed.setTimestamp();
+
+        message.channel.send(embed);
+    }
 
     if (!message.content.startsWith(client.config.data.prefix)) return;
 
