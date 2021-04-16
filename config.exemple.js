@@ -1,6 +1,7 @@
 module.exports = {
     app: {
-        token: ''
+        token: '',
+        owner: ['307512442617856000', '566035268373577738']
     },
     embed: {
         footer: 'Public bot on github ! | Look my activity',
