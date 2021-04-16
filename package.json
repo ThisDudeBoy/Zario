@@ -2,7 +2,7 @@
   "name": "ZarioBot",
   "version": "1.0.2",
   "description": "A simple discord bot",
-  "main": "index.js",
+  "main": "app.js",
   "author": "ThisDudeBoy,WaDixix",
   "license": "ISC",
   "dependencies": {
