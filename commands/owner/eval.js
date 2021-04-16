@@ -1,17 +1,12 @@
+const { clean } = require('../../util/functions.js');
+
 module.exports = {
     name: 'eval',
     aliases: [],
     category: 'owner',
 
-    async execute(client, message) {
+    async execute(client, message, args) {
         if (!client.config.app.owner.includes(message.author.id)) return message.reply("You are not allowed to do that.");
-        const args = message.content.split(" ").slice(1);
-        function clean(text) {
-            if (typeof(text) === "string")
-              return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-            else
-                return text;
-            }
         
         try {
             const code = args.join(" ");
@@ -27,4 +22,4 @@ module.exports = {
             message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
         }
     },
-    }
+}
