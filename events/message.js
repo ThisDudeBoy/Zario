@@ -21,19 +21,17 @@ module.exports = async (client, message) => {
 
     const cmd = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-    if (cmd.botPermissions) {
-        if(!message.guild.me.hasPermission(cmd.botPermissions)) {
-            return message.channel.send(helper.sendEmbedError(client, "Sorry, I don't have `"+ cmd.botPermissions +"` permission"));
-        }
-    }
-
-    if (cmd.memberPermissions) {
-        if(!message.member.hasPermission(cmd.memberPermissions)) {
-            return message.channel.send(helper.sendEmbedError(client, "You don't have `"+ cmd.memberPermissions +"` permission"));
-        }
-    }
-
     if (cmd) {
+        if (cmd.botPermissions) {
+            if(!message.guild.me.hasPermission(cmd.botPermissions)) {
+                return message.channel.send(helper.sendEmbedError(client, "Sorry, I don't have `"+ cmd.botPermissions +"` permission"));
+            }
+        }
+        if (cmd.memberPermissions) {
+            if(!message.member.hasPermission(cmd.memberPermissions)) {
+                return message.channel.send(helper.sendEmbedError(client, "You don't have `"+ cmd.memberPermissions +"` permission"));
+            }
+        }
         cmd.execute(client, message, args);
     } else {
         return;
