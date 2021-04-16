@@ -35,7 +35,6 @@ module.exports = async (client, message) => {
 
     if (cmd) {
         cmd.execute(client, message, args);
-        console.log(`${message.author.username} (${message.author.id}) executed (${cmd.name})`); 
     } else {
         return;
     }
