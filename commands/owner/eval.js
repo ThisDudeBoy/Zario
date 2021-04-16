@@ -7,7 +7,7 @@ module.exports = {
         if (!client.config.app.owner.includes(message.author.id)) return message.reply("You are not allowed to do that.");
         const args = message.content.split(" ").slice(1);
         function clean(text) {
-            if (typeof(text) === "string" && client.config.app.token)
+            if (typeof(text) === "string")
               return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
             else
                 return text;
