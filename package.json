@@ -1,5 +1,5 @@
 {
-  "name": "ZarioBot",
+  "name": "zariobot",
   "version": "1.0.2",
   "description": "A simple discord bot",
   "main": "app.js",
