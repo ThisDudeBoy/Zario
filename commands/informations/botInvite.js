@@ -9,8 +9,13 @@ module.exports = {
         const user = message.mentions.users.first() || message.author;
 
         if(!user.bot){
-            return message.channel.send("This user is not a bot.")
+            const userEmbed = new MessageEmbed();
+
+            userEmbed.setColor(client.config.embed.color);
+            userEmbed.setDescription('This user is not a bot.');
+            return message.channel.send(userEmbed)
         }
+
         const embed = new MessageEmbed();
         
         embed.setColor(client.config.embed.color);
