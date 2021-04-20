@@ -34,8 +34,6 @@ module.exports = {
                 index++
             }
 
-            console.log(loop);
-
             embed.setColor(client.config.embed.color);
             embed.setDescription("☑️ | " + totalDeleted + " messages deleted");
             embed.setTimestamp();
